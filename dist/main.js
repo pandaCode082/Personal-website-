@@ -70,13 +70,15 @@ async function windowLoadHandler() {
 //  ========================================================> Event listeners <========================================================  \\
 
 window.addEventListener("load", () => {
-    fetch("./../json/potfolios.json").then(res => {
-        if (res.status == 200) {
-            return res.json();
-        } else {
-            console.log("Error we cant found data");
-        }
-    })
+    fetch("./../json/potfolios.json")
+        .then(res => {
+            console.log(res);
+            if (res.status == 200) {
+                return res.json();
+            } else {
+                console.log("Error we cant found data");
+            }
+        })
         .then(data => {
             console.log(data)
             for (let item of data) {

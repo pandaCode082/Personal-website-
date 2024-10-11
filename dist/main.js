@@ -78,6 +78,7 @@ window.addEventListener("load", () => {
         }
     })
         .then(data => {
+            console.log(data)
             for (let item of data) {
                 portfolioWrapper.insertAdjacentHTML("beforeend", setPortfoiloTemplate(item["img-src"], item["title"], item["git-link"], item["website-link"]));
             }

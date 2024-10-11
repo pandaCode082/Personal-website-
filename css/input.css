@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    /* ----------------------------------- Space_Grotesk ----------------------------------- */
+    @font-face {
+        font-family: Space_Grotesk-bold;
+        src: url("./../font/Space_Grotesk/static/SpaceGrotesk-Bold.ttf");
+    }
+
+    @font-face {
+        font-family: Space_Grotesk-medium;
+        src: url("./../font/Space_Grotesk/static/SpaceGrotesk-Medium.ttf");
+    }
+
+    /* ----------------------------------- DarkerGrotesque ----------------------------------- */
+    @font-face {
+        font-family: DarkerGrotesque-Bold;
+        src: url("./../font/Darker_Grotesque/static/DarkerGrotesque-Bold.ttf");
+    }
+
+    /* ----------------------------------- DM sans ----------------------------------- */
+    @font-face {
+        font-family: DM-sans;
+        src: url("./../font/DM_Sans/static/DMSans-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: DM-sans-medium;
+        src: url("./../font/DM_Sans/static/DMSans-Medium.ttf");
+    }
+
+    @font-face {
+        font-family: DMSans-Bold;
+        src: url("./../font/DM_Sans/static/DMSans-Bold.ttf");
+    }
+}
+
+@layer components {
+    .bg-circle {
+        @apply absolute rounded-full aspect-[1/1] bg-white/[0.12] -z-20 blur-sm shadow-lg;
+    }
+
+    .skill-box {
+        @apply absolute rounded-full aspect-[1/1] bg-white grid place-content-center z-50;
+    }
+
+    .header-btn {
+        @apply w-[146px] h-[50px] grid place-content-center rounded-lg uppercase font-DM-sans-bold sm:font-DarkerGrotesque-Bold border border-aquaPlus;
+    }
+
+    .about-cart-eff {
+        @apply w-full h-full bg-white/20 rounded-[27px] rotate-[6deg] absolute top-0 left-0 -z-10;
+    }
+
+    /*  ------------------------------- about ------------------------------- */
+    .about-card {
+        @apply bg-aquaPlus text-aquaDark/80 flex justify-center flex-col items-center capitalize w-[91px] sm:w-32 lg:w-[168px] aspect-[1/1] rounded-lg;
+    }
+
+    /*  ------------------- skil card ------------------- */
+    .skill-card {
+        @apply text-white bg-aquaPlus/50 rounded-[18px] [&>h3]:text-aquaDark sm:w-[480px] xxs:w-[320px] w-[260px] sm:min-h-[294px] min-h-[198.5px] flex flex-col items-center justify-center py-4 transition-all duration-500;
+    }
+
+    .skill-card-title {
+        @apply capitalize text-center sm:text-xl text-sm font-DM-sans-bold;
+    }
+
+    .skil-card-list {
+        list-style-image: url("./../images/logo/blue-tik.png");
+        @apply grid grid-cols-2 justify-between gap-x-[120px] sm:gap-y-5 gap-y-[14px] sm:mt-5 mt-[13px] px-[49px];
+    }
+
+    .list-item {
+        @apply font-DM-sans-bold uppercase leading-[10px] sm:text-base text-[10px] text-nowrap;
+    }
+
+    .list-item+span {
+        @apply font-DM-sans sm:text-xs text-[8px] text-white/80 capitalize;
+    }
+
+    /*  ------------------------ portfolio ------------------------ */
+    .portfolio-card {
+        @apply p-[19px] rounded-[20px] bg-aquaPlus text-aquaDark sm:w-[378px] xxs:w-[320px] w-[280px] transition-opacity duration-300;
+    }
+
+    .portfolio-card-btn {
+        @apply p-2.5 font-DM-sans-medium rounded-xl capitalize inline-block sm:text-base text-sm;
+    }
+
+    .portfolio-img-wrapper {
+        @apply w-full aspect-[1.4/1] bg-aquaDark rounded-[18px] overflow-hidden mb-[15px] [&>img]:object-cover;
+    }
+
+    .portfolio-title {
+        @apply sm:text-2xl text-xl font-DM-sans-medium mb-[15px];
+    }
+
+    div>.portfolio-card-btn:nth-child(1) {
+        @apply text-aquaDark border border-aquaDark;
+    }
+
+    div>.portfolio-card-btn:nth-child(2) {
+        @apply bg-aquaDark border text-aquaPlus border-aquaDark;
+    }
+
+    /* ------------------------------ contact card ------------------------------ */
+
+    .contact-card {
+        @apply lg:w-[276px] w-[200px] lg:aspect-[2/1] aspect-[2/1.3] rounded-[18px] text-aquaDark bg-aquaPlus md:flex hidden justify-center items-center gap-[5px] text-center flex-col font-DM-sans;
+    }
+
+    .contact-card>svg,
+    .mobile-contact-card>svg {
+        @apply w-6 h-6 text-black;
+    }
+
+    .contact-card>h3,
+    .mobile-contact-card h3 {
+        @apply font-DM-sans-bold text-2xl capitalize;
+    }
+
+    .mobile-contact-card h3 {
+        @apply text-lg leading-3 mt-1;
+    }
+
+    .mobile-contact-card span {
+        @apply text-xs;
+    }
+
+    .contact-card>a,
+    .mobile-contact-card span {
+        @apply text-sm text-aquaDark-medium lg:mt-[5px];
+    }
+
+    .mobile-contact-card {
+        @apply w-[276px] h-16 rounded-[18px] text-aquaDark bg-aquaPlus md:hidden flex justify-center items-start gap-2.5 font-DM-sans pt-3;
+    }
+
+    /* ------------------- form --------------------- */
+    .form-label {
+        @apply font-DM-sans text-lg md:hidden capitalize mb-2.5;
+    }
+
+    .form-input {
+        @apply w-full xl:text-[32px] lg:text-2xl text-xl font-DM-sans text-aquaPlus bg-transparent border border-aquaPlus md:py-[19px] py-4 px-[30px] md:rounded-[18px] rounded-[10px] placeholder:capitalize placeholder:hidden placeholder:text-aquaPlus/40 outline-none my-2.5;
+    }
+
+    .footer-media {
+        @apply sm:w-[72px] w-10 aspect-[1/1] grid place-content-center text-aquaPlus bg-aquaDark-medium sm:rounded-[18px] rounded-[5px];
+    }
+
+    .footer-media svg {
+        @apply sm:w-[30px] sm:h-[30px] w-6 h-6;
+    }
+
+    .border-eff {
+        @apply w-[calc(100%+2px)] h-full rounded-[calc(100%+2px)] bg-red-500 absolute top-0 left-0 z-10;
+    }
+
+    .footer-nav-item svg {
+        @apply text-white sm:w-[30px] sm:h-[30px] w-6 h-6;
+    }
+
+    .footer-nav-item.active {
+        position: relative;
+    }
+
+    .footer-nav-item.active::after {
+        content: "";
+        @apply bg-aquaPlus absolute rounded-full sm:w-[51px] w-10;
+        top: 50%;
+        left: 50%;
+        aspect-ratio: 1 / 1;
+        z-index: 49;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        -moz-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+        -o-transform: translateY(-50%) translateX(-50%);
+    }
+
+    .footer-nav-item.active svg {
+        @apply text-aquaDark z-50 relative;
+    }
+}

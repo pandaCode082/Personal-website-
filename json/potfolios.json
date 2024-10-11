@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "title": "online shop",
+        "img-src": "./images/portfolio/shopping.png",
+        "website-link": "#",
+        "git-link": "#"
+    },
+    {
+        "id": "2",
+        "title": "login page",
+        "img-src": "./images/portfolio/login-page.png",
+        "website-link": "https://pandacode082.github.io/login-page-3D/",
+        "git-link": "https://github.com/pandaCode082/login-page-3D"
+    },
+    {
+        "id": "3",
+        "title": "cafee shop",
+        "img-src": "./images/portfolio/cafee-shop.png",
+        "website-link": "https://pandacode082.github.io/coffe-shop-static-page-after-learn-tailwindcss-/",
+        "git-link": "https://github.com/pandaCode082/coffe-shop-static-page-after-learn-tailwindcss-"
+    },
+    {
+        "id": "4",
+        "title": "wether app",
+        "img-src": "./images/portfolio/whter-app.png",
+        "website-link": "#",
+        "git-link": "#"
+    },
+    {
+        "id": "5",
+        "title": "music player",
+        "img-src": "./images/portfolio/music-player.png",
+        "website-link": "#",
+        "git-link": "#"
+    },
+    {
+        "id": "6",
+        "title": "todo app",
+        "img-src": "./images/portfolio/todo app.png",
+        "website-link": "#",
+        "git-link": "#"
+    }
+]

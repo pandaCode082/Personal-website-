@@ -23,8 +23,51 @@ const setPortfoiloTemplate = (src, mainTitle, gitLink, webLink) => {
     skillCardsWrapper = document.getElementById("skill-cards-wrapper"),
     footer = document.querySelector("footer"),
     scrollBtn = document.getElementById("scroll-back"),
-    portfolioCards = document.getElementsByClassName("portfolio-card");
-
+    portfolioCards = document.getElementsByClassName("portfolio-card"),
+    portfolioData = [
+        {
+            "id": "1",
+            "title": "online shop",
+            "img-src": "./images/portfolio/shopping.png",
+            "website-link": "#",
+            "git-link": "#"
+        },
+        {
+            "id": "2",
+            "title": "login page",
+            "img-src": "./images/portfolio/login-page.png",
+            "website-link": "https://pandacode082.github.io/login-page-3D/",
+            "git-link": "https://github.com/pandaCode082/login-page-3D"
+        },
+        {
+            "id": "3",
+            "title": "cafee shop",
+            "img-src": "./images/portfolio/cafee-shop.png",
+            "website-link": "https://pandacode082.github.io/coffe-shop-static-page-after-learn-tailwindcss-/",
+            "git-link": "https://github.com/pandaCode082/coffe-shop-static-page-after-learn-tailwindcss-"
+        },
+        {
+            "id": "4",
+            "title": "wether app",
+            "img-src": "./images/portfolio/whter-app.png",
+            "website-link": "#",
+            "git-link": "#"
+        },
+        {
+            "id": "5",
+            "title": "music player",
+            "img-src": "./images/portfolio/music-player.png",
+            "website-link": "#",
+            "git-link": "#"
+        },
+        {
+            "id": "6",
+            "title": "todo app",
+            "img-src": "./images/portfolio/todo app.png",
+            "website-link": "#",
+            "git-link": "#"
+        }
+    ]
 let batteryLevel,
     isCharging;
 //  ========================================================> Functions <========================================================  \\
@@ -70,25 +113,12 @@ async function windowLoadHandler() {
 //  ========================================================> Event listeners <========================================================  \\
 
 window.addEventListener("load", () => {
-    fetch("./../json/potfolios.json")
-        .then(res => {
-            console.log(res);
-            if (res.status == 200) {
-                return res.json();
-            } else {
-                console.log("Error we cant found data");
-            }
-        })
-        .then(data => {
-            console.log(data)
-            for (let item of data) {
-                portfolioWrapper.insertAdjacentHTML("beforeend", setPortfoiloTemplate(item["img-src"], item["title"], item["git-link"], item["website-link"]));
-            }
-        })
-        .catch(err => {
-            console.warn(err);
-        })
+
+    for (let item of portfolioData) {
+        portfolioWrapper.insertAdjacentHTML("beforeend", setPortfoiloTemplate(item["img-src"], item["title"], item["git-link"], item["website-link"]));
+    }
 })
+
 
 window.addEventListener("load", windowLoadHandler);
 
